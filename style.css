@@ -1,0 +1,74 @@
+html, body {
+  margin: 0;
+}
+
+body {
+  font-family: 'Lato', sans-serif;
+}
+
+ul {
+  float: right;
+  position: fixed;
+  right: 10%;
+}
+
+li {
+  list-style-type: none;
+  display: inline-block;
+  padding: 10px 15px;
+  background-color: rgb(230, 222, 225);
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
+
+#first {
+  background-image: url("bg.jpeg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-attachment: fixed;
+  background-size: cover;
+  width: 100vw;
+  height: 100vh;
+}
+
+#work-edu {
+  width: 100vw;
+  height: 100vh;
+}
+
+#skills {
+  width: 100vw;
+  height: 100vh;
+  background-color: rgb(240, 240, 240);
+
+}
+
+#portfolio {
+  width: 100vw;
+  height: 100vh;
+}
+
+#contact {
+  width: 100vw;
+  height: 40vh;
+  background-color: rgb(167, 167, 167);
+}
+
+#first h1 {
+  position: absolute;
+  top: 45vh;
+  left: 15vw;
+}
+
+#first h2 {
+  position: absolute;
+  top: 55vh;
+  left: 15vw;
+}
+
+h3 {
+  padding: 100px;
+}
