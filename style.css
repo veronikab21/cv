@@ -6,10 +6,11 @@ body {
   font-family: 'Lato', sans-serif;
 }
 
-ul {
+nav {
   float: right;
   position: fixed;
   right: 10%;
+  z-index: 1000;
 }
 
 li {
@@ -24,8 +25,8 @@ a {
   color: black;
 }
 
-#first {
-  background-image: url("bg.jpeg");
+#title {
+  background-image: url("img/bg.jpeg");
   background-repeat: no-repeat;
   background-position: center;
   background-attachment: fixed;
@@ -36,19 +37,21 @@ a {
 
 #work-edu {
   width: 100vw;
-  height: 100vh;
+  height: 80vh;
+  font-size: 1.4em;
 }
 
 #skills {
   width: 100vw;
   height: 100vh;
   background-color: rgb(240, 240, 240);
-
+  font-size: 1.4em;
 }
 
 #portfolio {
   width: 100vw;
   height: 100vh;
+  font-size: 1.4em;
 }
 
 #contact {
@@ -57,18 +60,87 @@ a {
   background-color: rgb(167, 167, 167);
 }
 
-#first h1 {
+#title h1 {
   position: absolute;
   top: 45vh;
   left: 15vw;
 }
 
-#first h2 {
+#title h2 {
   position: absolute;
   top: 55vh;
   left: 15vw;
 }
 
 h3 {
-  padding: 100px;
+  padding-top: 100px;
+  padding-left: 100px;
+  padding-bottom: 30px;
+}
+
+#portfolio h3, #contact h3  {
+  padding-top: 50px;
+}
+
+.ion-android-star, .ion-android-star-half, .ion-android-star-outline {
+  color: rgb(48, 2, 78)
+}
+
+table {
+  margin: auto;
+}
+
+td {
+  width: 200px;
+  height: 60px;
+}
+
+.image img{
+  width: 300px;
+  height: 200px;
+}
+
+.image {
+  width: 300px;
+  height: 200px;
+  float: left;
+  margin: 10px;
+  border: 1px solid rgb(167, 167, 167);
+}
+
+.img-container {
+  width: 80vw;
+  margin: auto;
+}
+
+.column-left {
+  float: left;
+  width: 30%;
+}
+
+.column-right {
+  float: left;
+  width: 70%;
+}
+
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.row {
+  width: 80vw;
+  margin: auto;
+}
+
+.column-left-contact {
+  width: 50%;
+  float:left;
+}
+
+.column-right-contact {
+  width: 50%;
+  float: right;
+  text-align: right;
 }
