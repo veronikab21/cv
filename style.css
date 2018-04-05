@@ -1,31 +1,87 @@
+/* latin-ext */
+@font-face {
+  font-family: 'Lato';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Lato Regular'), local('Lato-Regular'), url(fonts/S6uyw4BMUTPHjxAwXiWtFCfQ7A.woff2) format('woff2');
+  unicode-range: U+0100-024F, U+0259, U+1E00-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+/* latin */
+@font-face {
+  font-family: 'Lato';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Lato Regular'), local('Lato-Regular'), url(fonts/S6uyw4BMUTPHjx4wXiWtFCc.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+
 html, body {
   margin: 0;
+  padding: 0;
 }
 
 body {
   font-family: 'Lato', sans-serif;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  -webkit-text-size-adjust: 100% !important;
+  -webkit-transform: scale(1) !important;
+  -ms-transform: scale(1) !important;
+      transform: scale(1) !important; 
+}
+
+.container {
+  width: 100%;
+  height: 100%;
+  overflow-x: hidden;
+  overflow-y: auto;
+  position: relative;
+  -webkit-overflow-scrolling: touch!important;
+}
+
+.content {
+  width: 100%;
+  height: 100%;
+  overflow-x: hidden;
+  overflow-y: auto;
+  position: relative;
+  -webkit-overflow-scrolling: touch!important;
 }
 
 nav {
-  float: right;
-  position: fixed;
-  right: 8%;
+	position: fixed;
+  right: 30px;
+  top: 10px;
   z-index: 1000;
+  opacity: 0;
+  /* -webkit-transition: opacity 1s ease-in-out 1s;
+  -o-transition: opacity 1s ease-in-out 1s;
+  transition: opacity 1s ease-in-out 1s; */ 
+  
 }
 
 .ion-navicon {
   display: none;
+  opacity: 0;
+  /* -webkit-transition: opacity 1s ease-in-out 1s;
+  -o-transition: opacity 1s ease-in-out 1s;
+  transition: opacity 1s ease-in-out 1s; */
 }
 
-li {
+li, li:visited {
   list-style-type: none;
   display: inline-block;
   padding: 10px 15px;
   background-color: rgb(230, 222, 225);
+  -webkit-transition: background-color 1s;
+  -o-transition: background-color 1s;
   transition: background-color 1s;
 }
 
-li:hover {
+li:hover, li:active {
   background-color: rgb(184, 161, 169);
 }
 
@@ -34,12 +90,15 @@ a {
   color: black;
 }
 
-#title {
+.title {
   background-image: url("img/bg.jpeg");
   background-repeat: no-repeat;
   background-position: center;
-  background-attachment: fixed;
+  background-attachment: scroll;
   background-size: cover;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
   width: 100vw;
   height: 100vh;
 }
@@ -68,16 +127,24 @@ a {
   background-color: rgb(167, 167, 167);
 }
 
-#title h1 {
+h1 {
   position: absolute;
   top: 45vh;
   left: 15vw;
+  opacity: 0;
+  /* -webkit-transition: opacity 1s ease-in-out 2s;
+  -o-transition: opacity 1s ease-in-out 2s;
+  transition: opacity 1s ease-in-out 2s; */
 }
 
-#title h2 {
+h2 {
   position: absolute;
   top: 55vh;
   left: 15vw;
+  opacity: 0;
+  /* -webkit-transition: opacity 1s ease-in-out 3s;
+  -o-transition: opacity 1s ease-in-out 3s;
+  transition: opacity 1s ease-in-out 3s; */
 }
 
 h3 {
@@ -153,12 +220,15 @@ td {
   text-align: right;
 }
 
+a.facebook {
+  padding: 20px;
+  margin: -20px;
+}
 
 @media only screen 
   and (min-device-width: 768px) 
   and (max-device-width: 1024px) 
-  and (orientation: portrait) 
-  and (-webkit-min-device-pixel-ratio: 2) {
+  and (orientation: portrait) {
     #work-edu {
       height: 50vh;
     }
@@ -191,8 +261,7 @@ td {
 
 @media only screen 
   and (min-device-width: 320px) 
-  and (max-device-width: 667px)
-  and (-webkit-min-device-pixel-ratio: 2) {
+  and (max-device-width: 667px) {
     body {
       font-size: 12px;
     }
@@ -210,9 +279,9 @@ td {
     .ion-navicon {
       display: block;
       position: fixed;
-      top: 10px;
-      right: 20px;
-      font-size: 40px;
+      top: 20px;
+      right: 30px;
+      font-size: 45px;
       z-index: 1000;
     }
 
@@ -222,7 +291,7 @@ td {
     }
 
     nav {
-      top: 35px;
+      top: 50px;
       right: 15px;
     }
 
@@ -232,7 +301,6 @@ td {
 @media only screen 
   and (min-device-width: 320px) 
   and (max-device-width: 667px)
-  and (-webkit-min-device-pixel-ratio: 2)
   and (orientation: portrait) {
     #work-edu {
       height: 60vh;
@@ -259,7 +327,6 @@ td {
 @media only screen 
   and (min-device-width: 320px) 
   and (max-device-width: 667px)
-  and (-webkit-min-device-pixel-ratio: 2)
   and (orientation: landscape) {
     td {
       height: 40px;
@@ -295,9 +362,9 @@ td {
     .ion-navicon {
       display: block;
       position: fixed;
-      top: 10px;
-      right: 20px;
-      font-size: 40px;
+      top: 20px;
+      right: 30px;
+      font-size: 50px;
       z-index: 1000;
     }
 
@@ -307,15 +374,27 @@ td {
     }
 
     nav {
-      top: 35px;
+      top: 50px;
       right: 15px;
     }
+
     #work-edu {
       height: 60vh;
     }
 
     td {
-      width: 100px;
-      font-size: 0.8em;
+      width: 150px;
+      font-size: 1em;
     }
+
+    table {
+      margin: auto;
+    }
+    .img-container {
+      margin: 8vw;
+    }
+}
+
+.animated {
+  opacity: 1;
 }
